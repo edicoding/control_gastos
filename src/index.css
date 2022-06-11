@@ -185,6 +185,7 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
     font-size: 2.8rem;
     text-align: center;
+    width: 100%
 }
 
 .contenedor-presupuesto svg {
@@ -237,9 +238,16 @@ main {
 
 .filtros .campo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
+@media (min-width: 780px) {
+    .filtros .campo {
+        flex-direction: row;
+    }
+}
+
 .filtros label {
     font-size: 3rem;
     font-weight: 900;
